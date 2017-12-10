@@ -3,6 +3,7 @@ package com.contactlistapplication.activities;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -58,6 +59,7 @@ public class ContactListingActivity extends BaseActivity {
 
     private void initialise() {
         setActionbarTitle(getString(R.string.contacts));
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
         rvContactsList = findViewById(R.id.rvContactsList);
 
         if (contactsList == null) {
@@ -110,6 +112,7 @@ public class ContactListingActivity extends BaseActivity {
                 @Override
                 public void success(JsonArray responseObject, Response response) {
                     mDialog.dismiss();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
                     Log.d("Response-->", responseObject.toString());
                     try {
 
@@ -160,6 +163,8 @@ public class ContactListingActivity extends BaseActivity {
                 @Override
                 public void failure(RetrofitError error) {
                     mDialog.dismiss();
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+
                 }
             });
 
