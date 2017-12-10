@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        card_view:cardBackgroundColor="@color/colorWhite"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <com.contactlistapplication.custom_views.CustomTextViewBold
+                android:id="@+id/tvName"
+                style="@style/MediumBlackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16sdp" />
+
+            <com.contactlistapplication.custom_views.CustomTextViewRegular
+                android:id="@+id/tvUserName"
+                style="@style/SmallBlackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <com.contactlistapplication.custom_views.CustomTextViewRegular
+                android:id="@+id/tvEmail"
+                style="@style/SmallBlackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="email" />
+
+            <com.contactlistapplication.custom_views.CustomTextViewRegular
+                android:id="@+id/tvPhone"
+                style="@style/SmallBlackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="phone" />
+
+            <com.contactlistapplication.custom_views.CustomTextViewRegular
+                android:id="@+id/tvWebsite"
+                style="@style/SmallBlackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web" />
+
+            <com.contactlistapplication.custom_views.CustomTextViewRegular
+                android:id="@+id/tvLocation"
+                style="@style/SmallBlackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/take_me_here" />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.contactlistapplication.custom_views.CustomTextViewBold
+                android:id="@+id/tvToolbarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:layout_toLeftOf="@+id/ivAscendingOrder"
+                android:background="@color/colorTransperent"
+                android:maxLines="1"
+                android:text="@string/contacts"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_16sdp" />
+
+
+            <ImageView
+                android:id="@+id/ivAscendingOrder"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:visibility="gone"
+                android:contentDescription="@string/ascending_order"
+                android:layout_toLeftOf="@+id/ivDescendingOrder"
+                android:src="@mipmap/ascending_order" />
+
+            <ImageView
+                android:id="@+id/ivDescendingOrder"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:visibility="gone"
+                android:contentDescription="@string/descending_order"
+                android:src="@mipmap/descending_order"
+
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+</LinearLayout>
